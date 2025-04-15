@@ -1,0 +1,108 @@
+.project-card {
+    width: 330px;
+    height: 490px;
+    background-color: #fff; /* Replace with your theme color */
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    padding: 26px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
+    filter: brightness(1.1);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+  }
+  
+  .project-tags {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  
+  .project-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 2px;
+  }
+  
+  .project-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .project-date {
+    font-size: 12px;
+    margin-left: 2px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 0.8);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .project-date {
+      font-size: 10px;
+    }
+  }
+  
+  .project-description {
+    font-weight: 400;
+    color: rgba(51, 51, 51, 0.99);
+    overflow: hidden;
+    margin-top: 8px;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+  
+  .project-members {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  
+  .project-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-left: -10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid #fff;
+  }
+  
+  .project-button {
+    color: #007bff; /* your theme primary */
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    margin-top: auto;
+  }
+  

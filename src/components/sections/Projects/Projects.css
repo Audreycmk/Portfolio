@@ -1,0 +1,43 @@
+.projects-container {
+    padding: 2rem;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .filter-buttons button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .filter-buttons button.active {
+    background: #333;
+    color: white;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .project-card {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .project-category {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background: #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
