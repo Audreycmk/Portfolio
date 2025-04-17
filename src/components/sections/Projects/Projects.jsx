@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import ProjectCard from "./ProjectCard"; 
+import ProjectCard from "./ProjectCard";
+import ThreeBackground from "../../effects/ThreeBackground";
+import AnimatedAirplanes from "../../effects/AnimatedAirplanes";
+import "../../effects/AnimatedAirplanes.css";
 import "./Projects.css";
 
 const Projects = () => {
@@ -13,28 +16,32 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="projects-container">
-      <h2>Projects</h2>
-      {projects.length === 0 ? (
-        <p>Loading projects...</p>
-      ) : (
-        <div className="project-card-list">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project._id}
-              project={{
-                image: project.image || "/default-image.png", 
-                title: project.name,
-                date: project.date || "2025",
-                description: project.description,
-                technologies: project.technologies,
-                github: project.github || "#",
-                member: project.members || [],
-              }}
-            />
-          ))}
-        </div>
-      )}
+    <div style={{ position: "relative", overflow: "hidden" }}>
+      <ThreeBackground />
+      <AnimatedAirplanes />
+      <div className="projects-container" style={{ position: "relative", zIndex: 1 }}>
+        <h2>Projects</h2>
+        {projects.length === 0 ? (
+          <p>Loading projects...</p>
+        ) : (
+          <div className="project-card-list">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project._id}
+                project={{
+                  image: project.image || "/default-image.png",
+                  title: project.name,
+                  date: project.date || "2025",
+                  description: project.description,
+                  technologies: project.technologies,
+                  github: project.github || "#",
+                  member: project.members || [],
+                }}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

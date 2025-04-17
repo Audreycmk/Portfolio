@@ -1,108 +1,126 @@
+/* Project card container */
 .project-card {
-    width: 330px;
-    height: 490px;
-    background-color: #fff; /* Replace with your theme color */
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-    padding: 26px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    transition: all 0.5s ease-in-out;
+  flex: 0 0 300px;
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent for 3D bg effect */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  scroll-snap-align: start;
+  z-index: 2;
+  position: relative;
+  transform: translateX(50px);
+  opacity: 0;
+  animation: fadeSlideIn 0.7s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Project image */
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* Content inside the card */
+.project-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Title */
+.project-card-content h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.project-card-content p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  /* Standard fallback */
+  line-clamp: 4;
+  box-orient: vertical;
+}
+
+/* Tech stack badges */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.tech-stack span {
+  background: #f0f0f0;
+  color: #333;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  transition: background 0.3s;
+}
+
+.tech-stack span:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* GitHub + members */
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.project-links a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.project-links a:hover {
+  color: #005fa3;
+}
+
+/* Scroll animation */
+@keyframes fadeSlideIn {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
   }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
-    filter: brightness(1.1);
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .project-image {
-    width: 100%;
-    height: 180px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
-    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card {
+    flex: 0 0 85%;
   }
-  
-  .project-tags {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 4px;
+
+  .project-card-content h3 {
+    font-size: 1.3rem;
   }
-  
-  .project-details {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding: 0 2px;
-  }
-  
-  .project-title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
-    display: -webkit-box;
-    max-width: 100%;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .project-date {
-    font-size: 12px;
-    margin-left: 2px;
-    font-weight: 400;
-    color: rgba(51, 51, 51, 0.8);
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .project-date {
-      font-size: 10px;
-    }
-  }
-  
-  .project-description {
-    font-weight: 400;
-    color: rgba(51, 51, 51, 0.99);
-    overflow: hidden;
-    margin-top: 8px;
-    display: -webkit-box;
-    max-width: 100%;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-  }
-  
-  .project-members {
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-  }
-  
-  .project-avatar {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    margin-left: -10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border: 3px solid #fff;
-  }
-  
-  .project-button {
-    color: #007bff; /* your theme primary */
-    text-decoration: none;
-    font-weight: 600;
-    text-align: center;
-    margin-top: auto;
-  }
-  
+}

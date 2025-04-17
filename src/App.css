@@ -11,6 +11,19 @@
   margin: 0 auto;
   width: 100%;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+.content section {
+  min-height: 100vh;
+  padding: 80px 20px;
+}
+
+/* Adjust this based on your navbar height */
+section {
+  scroll-margin-top: 80px;
+}
 
 /* Basic responsive layout */
 @media (max-width: 768px) {
