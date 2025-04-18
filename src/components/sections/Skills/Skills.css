@@ -24,7 +24,7 @@
 }
 
 .skill-item {
-  background: rgba(55, 53, 57, 0.7);
+  background-color: rgba(26, 25, 42, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);

@@ -30,13 +30,13 @@ const Projects = () => {
               <ProjectCard
                 key={project._id}
                 project={{
-                  image: project.image || "/default-image.png",
+                  // image: project.image || "/default-image.png",
                   title: project.name,
                   date: project.date || "2025",
                   description: project.description,
                   technologies: project.technologies,
                   github: project.github || "#",
-                  member: project.members || [],
+                  // member: project.members || [],
                 }}
               />
             ))}
