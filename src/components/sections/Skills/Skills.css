@@ -1,6 +1,5 @@
 .skills-container {
   padding: 4rem 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 1rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -25,7 +24,7 @@
 }
 
 .skill-item {
-  background: rgba(176, 172, 187, 0.3);
+  background: rgba(55, 53, 57, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);

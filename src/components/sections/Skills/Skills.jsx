@@ -18,7 +18,7 @@ const Skills = () => {
     <div style={{ position: "relative", overflow: "hidden" }}>
       <ThreeBackground />
       <AnimatedAirplanes />
-    <div className="skills-container">
+    <div className="skills-container" style={{ position: "relative", zIndex: 1 }}>
       <h2>Skills</h2>
       </div>
       {skills.length === 0 ? (

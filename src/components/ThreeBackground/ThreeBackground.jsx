@@ -39,9 +39,10 @@ const Particles = ({ count, mouse, scrollY }) => {
       dummy.matrix.decompose(dummy.position, dummy.quaternion, dummy.scale);
 
       const angle = time * (0.1 + i * 0.0001) + i * 0.1;
-      const scrollFactor = scrollY * 0.002;
+      const scrollFactor = scrollY * 0.0005; // ← reduce scroll impact
 
-      dummy.position.y -= Math.sin(angle) * 0.01 + scrollFactor * 0.05;
+      dummy.position.y -= Math.sin(angle) * 0.008 + scrollFactor * 0.015; // ← slower overall movement
+      
       if (dummy.position.y < -5) dummy.position.y = 5;
 
       dummy.rotation.x = Math.sin(time * 0.7) * 0.01;

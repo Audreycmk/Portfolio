@@ -36,6 +36,7 @@ const Footer = () => {
               About
             </Link>
           </li>
+          |
           <li>
             <Link 
               to="projects" 
@@ -47,6 +48,7 @@ const Footer = () => {
               Projects
             </Link>
           </li>
+          |
           <li>
             <Link 
               to="skills" 
@@ -57,7 +59,8 @@ const Footer = () => {
             >
               Skills
             </Link>
-          </li>       
+          </li>   
+          |    
           <li>
             <Link 
               to="contact" 

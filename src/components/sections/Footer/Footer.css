@@ -20,10 +20,9 @@ body {
   padding: 2rem 0;
   display: flex;
   justify-content: center;
-  background-color: rgba(168, 85, 247, 0.1);
   border-top: 1px solid #17137d;
   margin-top: 2rem; 
-
+  background-color: rgba(3, 0, 31, 0.85);
 }
 
 .footer-wrapper {
@@ -38,14 +37,14 @@ body {
 }
 
 .footer-logo {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #fff;
 }
 
 .footer-nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
   list-style: none;
   padding: 0;
   margin: 0.5rem 0;
