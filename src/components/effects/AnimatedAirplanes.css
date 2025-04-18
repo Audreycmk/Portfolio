@@ -14,7 +14,7 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/616/616491.png"); /* star icon */
+  background-image: url("/public/wide.svg"); 
   background-size: contain;
   background-repeat: no-repeat;
   animation-timing-function: linear;

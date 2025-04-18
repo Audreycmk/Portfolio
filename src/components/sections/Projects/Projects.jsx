@@ -21,6 +21,7 @@ const Projects = () => {
       <AnimatedAirplanes />
       <div className="projects-container" style={{ position: "relative", zIndex: 1 }}>
         <h2>Projects</h2>
+        </div>
         {projects.length === 0 ? (
           <p>Loading projects...</p>
         ) : (
@@ -42,7 +43,7 @@ const Projects = () => {
           </div>
         )}
       </div>
-    </div>
+  
   );
 };
 

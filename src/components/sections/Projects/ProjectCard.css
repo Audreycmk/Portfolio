@@ -1,126 +1,72 @@
-/* Project card container */
+/* ProjectCard.css */
+
 .project-card {
-  flex: 0 0 300px;
-  background: rgba(255, 255, 255, 0.9); /* semi-transparent for 3D bg effect */
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
   overflow: hidden;
-  scroll-snap-align: start;
-  z-index: 2;
-  position: relative;
-  transform: translateX(50px);
-  opacity: 0;
-  animation: fadeSlideIn 0.7s ease forwards;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2);
 }
 
-/* Project image */
 .project-card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
-  border-bottom: 1px solid #eee;
 }
 
-/* Content inside the card */
 .project-card-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  padding: 1.5rem;
+  text-align: left;
 }
 
-/* Title */
 .project-card-content h3 {
-  font-size: 1.5rem;
-  color: #222;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
-/* Description */
 .project-card-content p {
-  color: #444;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 10px;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  /* Standard fallback */
-  line-clamp: 4;
-  box-orient: vertical;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0.5rem 0 1rem;
 }
 
-/* Tech stack badges */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 10px;
+  gap: 0.5rem;
 }
 
 .tech-stack span {
-  background: #f0f0f0;
-  color: #333;
-  padding: 4px 10px;
-  border-radius: 12px;
+  background: #7c3aed;
+  color: white;
+  padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
-  transition: background 0.3s;
+  border-radius: 0.25rem;
 }
 
-.tech-stack span:hover {
-  background: #ff6b6b;
-  color: #fff;
-}
-
-/* GitHub + members */
 .project-links {
-  margin-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
+  margin-top: 1rem;
 }
 
-.project-links a {
-  text-decoration: none;
-  color: #0077cc;
-  font-weight: 500;
-  transition: color 0.3s;
+.project-members {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
 }
 
-.project-links a:hover {
-  color: #005fa3;
-}
-
-/* Scroll animation */
-@keyframes fadeSlideIn {
-  from {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .project-card {
-    flex: 0 0 85%;
-  }
-
-  .project-card-content h3 {
-    font-size: 1.3rem;
-  }
+.project-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
 }

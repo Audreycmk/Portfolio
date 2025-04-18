@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import ThreeBackground from "../../effects/ThreeBackground";
+import AnimatedAirplanes from "../../effects/AnimatedAirplanes";
+import "../../effects/AnimatedAirplanes.css";
 import "./Skills.css";
 
 const Skills = () => {
@@ -12,15 +15,19 @@ const Skills = () => {
   }, []);
 
   return (
+    <div style={{ position: "relative", overflow: "hidden" }}>
+      <ThreeBackground />
+      <AnimatedAirplanes />
     <div className="skills-container">
       <h2>Skills</h2>
+      </div>
       {skills.length === 0 ? (
         <p>Loading skills...</p>
       ) : (
         <ul className="skill-list">
           {skills.map((skill) => (
             <li key={skill._id} className="skill-item">
-              {skill.name} - <strong>{skill.level}</strong>
+              {skill.name}<strong>{skill.level}</strong>
             </li>
           ))}
         </ul>

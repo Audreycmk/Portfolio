@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import ThreeBackground from "../../effects/ThreeBackground";
+import AnimatedAirplanes from "../../effects/AnimatedAirplanes";
+import "../../effects/AnimatedAirplanes.css";
 import "./Contact.css";
 
 const Contact = () => {
@@ -27,6 +30,9 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+      <div style={{ position: "relative", overflow: "hidden" }}>
+      <ThreeBackground />
+      <AnimatedAirplanes />
       <h1>Contact Me</h1>
       <form ref={form} onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
@@ -47,6 +53,7 @@ const Contact = () => {
         </div>
         <button type="submit" className="submit-button">Send Message</button>
       </form>
+    </div>
     </div>
   );
 };
