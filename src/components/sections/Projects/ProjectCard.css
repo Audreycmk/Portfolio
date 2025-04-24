@@ -16,7 +16,7 @@
 }
 
 .project-card img {
-  width: 100%;
+  width: 90%;
   height: 180px;
   object-fit: cover;
 }
@@ -39,13 +39,13 @@
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .tech-stack span {
   background: #7c3aed;
   color: white;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   font-size: 0.75rem;
   border-radius: 0.25rem;
 }
@@ -71,7 +71,7 @@
   margin-right: 5px;
 }
 .project-links a {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #7c3aed;
   text-decoration: none;

@@ -11,7 +11,13 @@ const Projects = () => {
   useEffect(() => {
     fetch("https://http5222-assignment1-ghbo.onrender.com/api/projects")
       .then((res) => res.json())
-      .then((data) => setProjects(data.projects))
+      .then((data) => {
+        if (data && Array.isArray(data.projects)) {
+          setProjects(data.projects);
+        } else {
+          console.error("Unexpected response format:", data);
+        }
+      })
       .catch((err) => console.error("Failed to fetch projects:", err));
   }, []);
 
@@ -21,7 +27,6 @@ const Projects = () => {
       <AnimatedAirplanes />
       <div className="projects-container" style={{ position: "relative", zIndex: 1 }}>
         <h2>Projects</h2>
-        </div>
         {projects.length === 0 ? (
           <p>Loading projects...</p>
         ) : (
@@ -30,20 +35,22 @@ const Projects = () => {
               <ProjectCard
                 key={project._id}
                 project={{
-                  // image: project.image || "/default-image.png",
+                  image: `${project.media}` || "/default-image.png",
                   title: project.name,
-                  date: project.date || "2025",
+                  date: new Date(project.date).toLocaleDateString("en-CA", {
+                    year: "numeric",
+                    month: "short",
+                  }),
                   description: project.description,
-                  technologies: project.technologies,
-                  github: project.github || "#",
-                  // member: project.members || [],
+                  technologies: project.technologies || [],
+                  github: project.github || "#"
                 }}
               />
             ))}
           </div>
         )}
       </div>
-  
+    </div>
   );
 };
 

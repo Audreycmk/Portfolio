@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => {
         </div>
         <div className="project-links">
           <a href={project.github}>
-            GitHub Repo
+            View GitHub 
           </a>
           <span>{project.date}</span>
         </div>
