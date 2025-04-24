@@ -79,6 +79,29 @@
 }
 
 .project-links a:hover {
-  color: #fff;
+  color: #2b1a70;
+  cursor: pointer;
+}
+
+
+.view-project a {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: rgb(22 9 65);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #49435a;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.view-project a:hover {
+  border: 1px solid #7c3aed;
+  /* background-color: #2b1a70; */
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
   cursor: pointer;
 }

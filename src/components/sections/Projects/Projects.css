@@ -1,3 +1,18 @@
+.loading p {
+  animation: pulseText 1.5s infinite ease-in-out;
+  color: #94a3b8;
+}
+
+@keyframes pulseText {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
 /* Container and heading styling */
 .projects-container {
   max-width: 1200px;
@@ -34,6 +49,7 @@
   scroll-behavior: smooth;
   padding: 20px 0;
   animation: slideInRight 1s ease forwards;
+  
 }
 
 .project-card-list::-webkit-scrollbar {
@@ -41,7 +57,7 @@
 }
 
 .project-card-list::-webkit-scrollbar-thumb {
-  background: #282741;
+  background: #4a487b;
   border-radius: 4px;
 }
 
@@ -58,8 +74,7 @@
 }
 
 .project-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px #0d0146;
 }
 
 /* Image styling */
@@ -129,7 +144,7 @@
 }
 
 .project-links a:hover {
-  color: #fff;
+  color: #7c3aed;
 }
 
 /* Scroll indicator text */

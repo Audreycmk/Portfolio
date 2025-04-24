@@ -10,7 +10,7 @@
   background-color: rgba(3, 0, 31, 0.85);
 }
 
-/* Navbar scrolled background (added dynamically via class) */
+/* Navbar scrolled background */
 .navbar.scrolled {
   background-color: rgba(245, 245, 245, 0.9);
   backdrop-filter: blur(8px);
@@ -57,4 +57,68 @@
 .navbar-link:hover {
   color: #7c3aed;
   cursor: pointer;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  z-index: 60;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile menu with animation */
+.navbar-menu-mobile {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  background-color: rgba(3, 0, 31, 0.85);
+  padding: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.navbar-menu-mobile.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

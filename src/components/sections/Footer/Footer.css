@@ -81,3 +81,10 @@ body {
   font-size: 0.9rem;
   color: #fff;
 }
+/* Hide footer-nav on small screens (phones) */
+@media (max-width: 768px) {
+  .footer-nav {
+    display: none;
+  }
+}
+
