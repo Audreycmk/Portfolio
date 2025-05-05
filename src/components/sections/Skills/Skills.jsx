@@ -8,7 +8,7 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    fetch("https://http5222-assignment1-ghbo.onrender.com/api/skills")
+    fetch("https://practical-kindness-production.up.railway.app/api/skills")
       .then((res) => res.json())
       .then((data) => setSkills(data.skills))
       .catch((err) => console.error("Failed to fetch skills:", err));

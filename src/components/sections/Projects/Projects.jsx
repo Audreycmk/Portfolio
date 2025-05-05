@@ -9,7 +9,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("https://http5222-assignment1-ghbo.onrender.com/api/projects")
+    fetch("https://practical-kindness-production.up.railway.app/api/projects")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched data:", data); // 確保只有這邊印出

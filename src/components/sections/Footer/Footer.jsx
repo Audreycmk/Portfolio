@@ -74,22 +74,22 @@ const Footer = () => {
           </li>
         </ul>
         <div className="footer-icons">
-          <a
-            href={Bio.linkedin}
-            className="footer-icon"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedIn />
-          </a>
-          <a
-            href={Bio.github}
-            className="footer-icon"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GitHub />
-          </a>
+        <a
+          href={Bio.linkedin}
+          className="footer-icon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedIn sx={{ fontSize: 40 }} />
+        </a>
+        <a
+          href={Bio.github}
+          className="footer-icon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GitHub sx={{ fontSize: 40 }} />
+        </a>
         </div>
         <p className="footer-copy">&copy; 2025 Audrey Chung. All rights reserved.</p>
       </div>
