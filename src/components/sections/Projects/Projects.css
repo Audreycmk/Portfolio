@@ -24,7 +24,7 @@
 
 .projects-container h2 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-weight: 700;
   position: relative;
 }
@@ -121,9 +121,6 @@
   transition: background 0.3s;
 }
 
-/* .tech-stack span:hover {
-  background: #1e293b;
-} */
 
 /* GitHub + Member info */
 .project-links {
@@ -147,15 +144,72 @@
   color: #7c3aed;
 }
 
-/* Scroll indicator text */
-.projects-container::after {
-  content: "← Scroll →";
-  display: block;
+/* Scroll indicator under H2 for mobile only */
+.scroll-indicator-mobile {
   text-align: center;
   font-size: 0.9rem;
   color: #94a3b8;
-  margin-top: 10px;
+  margin-top: 5px;
 }
+
+@media (min-width: 769px) {
+  .scroll-indicator-mobile {
+    display: none;
+  }
+}
+
+/* Button scroll wrapper */
+.project-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-button-row {
+  margin-top: 3rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+}
+
+/* Circle buttons with background */
+.scroll-btn {
+  background-color: rgb(74, 72, 123, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: rgb(23, 19, 125, 0.6);
+  
+}
+
+/* Hide buttons on mobile */
+@media (max-width: 768px) {
+  .scroll-button-row {
+    display: none;
+  }
+}
+
+.scroll-indicator {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+    display: block;
+  }
+}
+
 
 /* Animations */
 @keyframes fadeIn {

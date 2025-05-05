@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ThreeBackground from "../../effects/ThreeBackground";
 import AnimatedAirplanes from "../../effects/AnimatedAirplanes";
@@ -7,6 +7,19 @@ import "./Projects.css";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  const scrollRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     fetch("https://practical-kindness-production.up.railway.app/api/projects")
@@ -32,12 +45,14 @@ const Projects = () => {
         style={{ position: "relative", zIndex: 1 }}
       >
         <h2>Projects</h2>
+        <p className="scroll-indicator">← Scroll →</p>
         {projects.length === 0 ? (
           <div className="loading">
             <p>Loading projects...</p>
           </div>
         ) : (
-          <div className="project-card-list">
+          <div className="project-scroll-wrapper">
+          <div className="project-card-list" ref={scrollRef}>
             {projects.map((project) => (
               <ProjectCard
                 key={project._id}
@@ -56,6 +71,13 @@ const Projects = () => {
               />
             ))}
           </div>
+        
+          {/* Scroll buttons below the cards */}
+          <div className="scroll-button-row">
+            <button className="scroll-btn" onClick={scrollLeft}>◀</button>
+            <button className="scroll-btn" onClick={scrollRight}>▶</button>
+          </div>
+        </div>        
         )}
       </div>
     </div>

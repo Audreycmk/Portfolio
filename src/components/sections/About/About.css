@@ -47,14 +47,14 @@
   padding: 0.75rem 1.5rem;
   background-color: #7c3aed; /* purple */
   color: white;
-  border-radius: 9999px; /* fully rounded */
+  border-radius: 50px;
+  border-radius: 2px solid linear-gradient(to right, #583eff, #d533ff);
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .view-work-button:hover {
-  border: 1px solid #7c3aed;
-  background-color: #2b1a70;
+  background-color: #17137d;
   cursor: pointer;
 }
 .icon {

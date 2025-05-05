@@ -18,9 +18,17 @@ const ProjectCard = ({ project }) => {
         </div>
 
         <div className="project-links">
-          <a href={project.github}>
-            View GitHub 
-          </a>
+          {project.github && (
+           <a
+           className="github-button"
+           href={project.github}
+           target="_blank"
+           rel="noopener noreferrer"
+          >
+           <i className="fab fa-github me-1"></i>
+            GitHub
+         </a>
+          )}
           <span>{project.date}</span>
         </div>
         <div className="view-project">

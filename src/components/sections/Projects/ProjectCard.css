@@ -55,7 +55,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.875rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .project-members {
@@ -73,16 +73,32 @@
 .project-links a {
   font-size: 0.8rem;
   font-weight: 500;
-  color: #7c3aed;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.project-links a:hover {
-  color: #2b1a70;
-  cursor: pointer;
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 1rem;
+  background-color: #e4e4e4; /* dark background */
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  border: 1px solid #e4e4e4;
+  gap: 0.5rem;
 }
 
+.github-button:hover {
+  background-color: #060122;
+  border: 1px solid #49435a;
+  cursor: pointer;
+}
+.project-links a:hover {
+  color: #fff !important; 
+}
 
 .view-project a {
   display: flex;
