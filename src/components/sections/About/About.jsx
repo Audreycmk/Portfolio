@@ -34,12 +34,17 @@ const About = () => {
             </div>
           </div>
 
-          {/* View My Work Button OUTSIDE intro */}
-          <div className="button-wrapper" style={{ textAlign: "center", marginTop: "2rem" }}>
-            <a href="#projects" className="view-work-button">
-              View My Work <ArrowDown size={18} />
-            </a>
-          </div>
+         {/* Download Resume Button OUTSIDE intro */}
+        <div className="button-wrapper" style={{ textAlign: "center", marginTop: "2rem" }}>
+          <a 
+            href="https://drive.google.com/uc?export=download&id=14MN9usxpUlu-QtIpnwNiKjF2enN7LuQE" 
+            className="resume-button" 
+            download="Audrey Chung Resume.pdf"
+          >
+            Download My Resume
+          </a>
+        </div>
+
 
         </div>
       </section>
