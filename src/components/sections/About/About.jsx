@@ -37,7 +37,7 @@ const About = () => {
          {/* Download Resume Button OUTSIDE intro */}
         <div className="button-wrapper" style={{ textAlign: "center", marginTop: "2rem" }}>
           <a 
-            href="https://drive.google.com/file/d/1hBcyni5r_Q2MRezEAvqJt6C0n_M_wHlu/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1ak1KQX8j2cG4vlQR9VVjb-VqSMnx2LFV/view?usp=sharing" 
             className="resume-button" 
             download="Audrey Chung Resume.pdf"
           >
