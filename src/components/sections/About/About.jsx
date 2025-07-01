@@ -38,6 +38,7 @@ const About = () => {
         <div className="button-wrapper" style={{ textAlign: "center", marginTop: "2rem" }}>
           <a 
             href="https://drive.google.com/file/d/1aCJ0B4tpG6Y_gC7MSvRZSPNT2nehdFAX/view?usp=drive_link" 
+            className="resume-button" 
             download="Audrey Chung Resume.pdf"
           >
             Download My Resume
