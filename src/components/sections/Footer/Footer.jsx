@@ -7,7 +7,7 @@ import {
 import "./Footer.css";
 
 const Bio = {
-  linkedin: "https://www.linkedin.com/in/man-kwan-karen-chung-116718356/",
+  linkedin: "https://www.linkedin.com/in/audrey-chung-116718356/",
   github: "https://github.com/Audreycmk",
 };
 
