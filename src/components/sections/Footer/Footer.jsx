@@ -91,7 +91,7 @@ const Footer = () => {
           <GitHub sx={{ fontSize: 40 }} />
         </a>
         </div>
-        <p className="footer-copy">&copy; 2025 Audrey Chung. All rights reserved.</p>
+        <p className="footer-copy">&copy; 2026 Audrey Chung. All rights reserved.</p>
       </div>
     </div>
   );

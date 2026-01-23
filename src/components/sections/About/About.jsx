@@ -28,7 +28,7 @@ const About = () => {
               <h1 className="name">Audrey Chung</h1>
               <h2 className="title">Creative Developer & Designer</h2>
               <p className="description">
-                Hello! I'm a passionate developer who combines technical skills with creative design 
+                Welcome! I'm a passionate developer who combines technical skills with creative design 
                 to build immersive digital experiences.
               </p>
             </div>
@@ -37,9 +37,9 @@ const About = () => {
          {/* Download Resume Button OUTSIDE intro */}
         <div className="button-wrapper" style={{ textAlign: "center", marginTop: "2rem" }}>
           <a 
-            href="https://drive.google.com/file/d/1aCJ0B4tpG6Y_gC7MSvRZSPNT2nehdFAX/view?usp=drive_link" 
+            href="https://drive.google.com/file/d/1MModzSXLBNC80_MbTJ6ktjnHBP2At62F/view?usp=sharing" 
             className="resume-button" 
-            download="Audrey Chung Resume.pdf"
+            download="Audrey Chung - Full Stack Developer.pdf"
           >
             Download My Resume
           </a>
